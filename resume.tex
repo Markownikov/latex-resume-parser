@@ -1,0 +1,298 @@
+ 
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Vishnu Shukla} % Your Name
+\newcommand{\course}{Bachelor of Technology} % Your Program
+\newcommand{\roll}{2021UG4028} % Your Roll No.
+\newcommand{\phone}{6392458915} % Your Phone Number
+\newcommand{\emaila}{vishnushukla789@gmail.com} %Email 1
+\newcommand{\emailb}{vishnu.21ug4028@iiitranchi.ac.in} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=2cm,clip]{imageslo.jpeg}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
+  {Roll No.: \roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {ECE(ES \& IOT)} &  \href{https://github.com/Markownikov/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  {Indian Institute Of Information Technology, Ranchi} & \href{https://www.linkedin.com/in/vishnushukla11/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute Of Information Technology, Ranchi }{CGPA: 8.51}
+      {B.Tech in ECE(ES \& IOT) }{2021-present}
+    \resumeSubheading
+      {Heliger Borden Education Centre}{Percentage: 86.25}
+      {ISC Board, Kanpur,Uttar Pradesh}{2018-2019}
+    \resumeSubheading
+      {Oxford Model Senior Secondary School}{CGPA: 10}
+      {CBSE Board, Kanpur, Uttar Pradesh}{2016-2017}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+    
+      
+
+     \resumeProject
+      {Blognest} %Project Name
+      { Blog Application (Frontend + Backend)} %Project Name, Location Name
+      {\href{https://github.com/Markownikov/BLOGNEST}{Link}}
+      
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: : HTML, CSS, Javascript, ReactJS, Node.js with Express, MongoDB} 
+        \item {A comprehensive blog application using React.js for the frontend with Material-UI (MUI) for styling, Redux for state management, and a rich text editor to create and edit blog posts. The application also include a theme switcher for toggling between light and dark modes. Additionally, a backend to manage CRUD operations for blog content.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    
+
+    \resumeProject
+      {EventEase} %Project Name {\href{https://www.codechef.com/users/heartyvishu11}{Link}} 
+      {A Web-Based Conference management application} %Project Name, Location Name
+      {\href{https://markownikov.github.io/EventEase/}{Link}} 
+      
+
+      \resumeItemListStart
+        \item {Tools \& technologies used:  HTML, CSS, JS/Bootstrap, Firebase}
+
+        
+        \item {A Web-Based Conference management application which allows the Users to create various conferences and attend the conference events involving keynote sessions scheduled,research paper presentation etc
+        The Host can create the meeting for different schedules.The Speakers Can be added for the meetings created. The Speakers will take the keynote Session.The Host will be able to update the schedules according to the planned meetings. Other attendees will be able to view the schedule of conference. The Host, Keynote Speaker, Reviewers and participants can attend the meeting created by the Host and take part in the conference.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{Coding Profiles}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Coding Ninja, } % Position
+    {Vishnu\_Shukla}{\href{https://www.codingninjas.com/studio/profile/1f5dff90-708b-4c99-b431-acdcfac82c9c}{Link}} 
+    {Solved 300+ problems with Highest Rating-2439}       
+     
+\resumePOR{CodeChef, } % Position
+    {heartyvishu11 (3-Star)}{\href{https://www.codechef.com/users/heartyvishu11}{Link}} 
+    {Solved 100+ problems with Highest Rating-1726}
+\resumePOR{Leetcode, } % Position
+    {the\_roarer }{\href{https://leetcode.com/the_roarer/}{Link}} 
+    {Solved 50+ problems with Highest Rating-1776} 
+\resumePOR{Codeforces, } % Position
+    {vishnu.21ug4028 }{\href{https://codeforces.com/profile/vishnu.21ug4028/}{Link}} 
+    {Newbie(Beginner) at codeforces with Highest Rating-1072}     
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: C, C++, SQL, JAVA (Beginner) } \\
+     \textbf{Developer Tools}{:VS Code, IntelliJ, MySQL } \\
+     \textbf{Web Dev}{: HTML, CSS, JavaScript, Tailwind, Bootstrap,ReactJS} \\
+     \textbf{Soft Skills}{: Problem solving, Leadership, Active listening, Teamwork, Adaptability, etc.} \\
+     \textbf{Coursework}{: Data Structure and Algorithms,  Operating System,  Object Oriented Programming,  Database Management System } \\
+     
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+
+
+
+
+
+%-----------Achievements-----------------
+\section{\textbf{Certification \& Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{ } % Award
+    {Global rank 26 \& 29 in Codechef Starters 108 \& 107 (Div 4) repectively} % Event
+    {15/11/2023} %Event Year
+    
+\resumePOR{ } % Award
+    {Goldman Sachs Software Engineering Job Simulation} % Event
+    {\href{https://shorturl.at/afuKY}{Certification Link}}
+    
+\resumePOR{ } % Award
+    {JP Morgan Software Engineering Job Simulation} % Event
+    {\href{https://shorturl.at/aNST7}{Certification Link}}
+    
+\resumePOR{ } % Award
+    {Coding Ninja Coding world cup} % Event
+    {\href{https://ninjasfiles.s3.amazonaws.com/certificate_of_event_coding_world_cup_powered_by_logitech_1606d5db1ea5a7b6a978.pdf}{Certification Link}} %Event Year 
+\resumePOR{ } % Award
+    {HTML, CSS, JS } % Event
+    {\href{https://youaccel.com/admin/certificate_gen/tcpdf/ya/certificate_ya2.php?certid=10687914}{Certification Link}} %Event Year     
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+%-------------------------------------------
+\end{document}
